@@ -1,0 +1,7 @@
+.Home {
+  height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgb(52, 48, 47);
+}
