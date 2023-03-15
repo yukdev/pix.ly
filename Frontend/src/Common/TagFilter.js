@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Form from "react-bootstrap/Form";
-import Container from "react-bootstrap/esm/Container";
+import Form from 'react-bootstrap/esm/Form';
+import Container from 'react-bootstrap/esm/Container';
 
 /** TagFilter: Renders a form for filtering photos by tag
  *
@@ -12,7 +12,7 @@ import Container from "react-bootstrap/esm/Container";
  *
  * */
 export default function TagFilter({ addFilters }) {
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
 
   /** update state with filter value */
   function handleChange(evt) {
@@ -24,7 +24,7 @@ export default function TagFilter({ addFilters }) {
   function handleSubmit(evt) {
     evt.preventDefault();
     addFilters(filter);
-    setFilter("");
+    setFilter('');
   }
 
   return (

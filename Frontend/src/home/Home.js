@@ -1,9 +1,9 @@
-import "./Home.css";
+import './Home.css';
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import Container from "react-bootstrap/Container";
+import Container from 'react-bootstrap/esm/Container';
 
 /** Home: Renders home page
  *

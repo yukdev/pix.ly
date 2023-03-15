@@ -1,9 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import NavBar from "react-bootstrap/Navbar";
+import Container from 'react-bootstrap/esm/Container';
+import Nav from 'react-bootstrap/esm/Nav';
+import NavBar from 'react-bootstrap/esm/Navbar';
 
 /** Navigation: Renders navigation bar
  *

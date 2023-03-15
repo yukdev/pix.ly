@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-import PixlyApi from "../api/api";
+import PixlyApi from '../api/api';
 
-import Container from "react-bootstrap/Container";
+import Container from 'react-bootstrap/esm/Container';
 
-import TagFilter from "../Common/TagFilter";
-import PopularTags from "./PopularTags";
-import ActiveFilters from "./ActiveFilters";
-import PhotoGallery from "./PhotoGallery";
+import TagFilter from '../Common/TagFilter';
+import PopularTags from './PopularTags';
+import ActiveFilters from './ActiveFilters';
+import PhotoGallery from './PhotoGallery';
 
 /** PhotoGalleryContainer: Renders PhotoGallery and related components
  *
@@ -38,13 +38,13 @@ export default function PhotoGalleryContainer() {
             isLoading: false,
           }));
         } catch (err) {
-          console.error("Error fetching photos", err);
+          console.error('Error fetching photos', err);
         }
       }
 
       fetchPhotos();
     },
-    [photos.activeFilters]
+    [photos.activeFilters],
   );
 
   useEffect(function getPopularTagsWhenMounted() {
@@ -53,7 +53,7 @@ export default function PhotoGalleryContainer() {
         const tags = await PixlyApi.getPopularTags();
         setPhotos((p) => ({ ...p, popularTags: tags }));
       } catch (err) {
-        console.error("Error fetching tags", err);
+        console.error('Error fetching tags', err);
       }
     }
     getPopularTags();
@@ -76,9 +76,9 @@ export default function PhotoGalleryContainer() {
   /** remove a tag from filters */
   function removeFilter(tag) {
     const newFilter = photos.activeFilters
-      .split(" ")
+      .split(' ')
       .filter((t) => t !== tag)
-      .join(" ");
+      .join(' ');
     setPhotos((p) => ({ ...p, activeFilters: newFilter }));
   }
 
@@ -99,7 +99,7 @@ export default function PhotoGalleryContainer() {
       });
       setPhotos((p) => ({ ...p, photoList: newPhotos }));
     } catch (err) {
-      console.error("Error adding tag", err);
+      console.error('Error adding tag', err);
     }
   }
 

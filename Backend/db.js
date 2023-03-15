@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-import pkg from "pg";
+import pkg from 'pg/lib/index.js';
 const { Client } = pkg;
 
-import { getDatabaseUri } from "./config.js";
+import { getDatabaseUri } from './config.js';
 const db = new Client({
   connectionString: getDatabaseUri(),
 });

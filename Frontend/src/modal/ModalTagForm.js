@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/Button";
+import Form from 'react-bootstrap/esm/Form';
+import InputGroup from 'react-bootstrap/esm/InputGroup';
+import Button from 'react-bootstrap/esm/Button';
 
 /** ModalTagForm: Renders a form for adding a tag to a photo
  *
@@ -14,7 +14,7 @@ import Button from "react-bootstrap/Button";
  * */
 export default function ModalTagForm({ handleTagSubmit, handleTagCancel }) {
   const [formData, setFormData] = useState({
-    tag: "",
+    tag: '',
   });
 
   /** update state with form data */
@@ -27,7 +27,7 @@ export default function ModalTagForm({ handleTagSubmit, handleTagCancel }) {
   async function handleFormSubmit(e) {
     e.preventDefault();
     await handleTagSubmit(formData.tag);
-    setFormData({ tag: "" });
+    setFormData({ tag: '' });
   }
 
   return (

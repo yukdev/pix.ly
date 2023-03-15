@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import PixlyApi from "../api/api";
+import PixlyApi from '../api/api';
 
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
+import Container from 'react-bootstrap/esm/Container';
+import Form from 'react-bootstrap/esm/Form';
+import Button from 'react-bootstrap/esm/Button';
+import Card from 'react-bootstrap/esm/Card';
 
 /** AddPhotoForm: Form for adding a photo
  *
@@ -20,8 +20,8 @@ function AddPhotoForm() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    title: "",
-    tags: "",
+    title: '',
+    tags: '',
     photo: null,
   });
 
@@ -30,7 +30,7 @@ function AddPhotoForm() {
     evt.preventDefault();
     try {
       await PixlyApi.uploadImage(formData);
-      navigate("/photos/gallery");
+      navigate('/photos/gallery');
     } catch (e) {
       console.error(e);
     }

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Image from "react-bootstrap/Image";
+import Image from 'react-bootstrap/esm/Image';
 
-const S3_BASE_URL = "https://pixly-knhr.s3.amazonaws.com/";
+const S3_BASE_URL = 'https://pixly-knhr.s3.amazonaws.com/';
 
 /** PhotoCard: Renders a single photo
  *
@@ -27,7 +27,7 @@ function PhotoCard({ photo, handleShow }) {
       className="PhotoCard"
       key={photo.id}
       src={`${S3_BASE_URL}${photo.id}`}
-      style={{ width: "100%" }}
+      style={{ width: '100%' }}
       alt={photo.title}
       onClick={handleClick}
     />

@@ -1,16 +1,16 @@
-import "./PhotoModal.css";
+import './PhotoModal.css';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Modal from "react-bootstrap/Modal";
-import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/esm/Container";
-import PixlyApi from "../api/api";
+import Modal from 'react-bootstrap/esm/Modal';
+import Image from 'react-bootstrap/esm/Image';
+import Container from 'react-bootstrap/esm/Container';
+import PixlyApi from '../api/api';
 
-import ModalTags from "./ModalTags";
-import ModalTagForm from "./ModalTagForm";
+import ModalTags from './ModalTags';
+import ModalTagForm from './ModalTagForm';
 
-const S3_BASE_URL = "https://pixly-knhr.s3.amazonaws.com/";
+const S3_BASE_URL = 'https://pixly-knhr.s3.amazonaws.com/';
 
 /** PhotoModal: Renders a modal with a photo and tags
  *
@@ -77,7 +77,7 @@ export default function PhotoModal({
           </Container>
         </Modal.Header>
         <Modal.Body>
-          <Image src={`${S3_BASE_URL}${id}`} fluid style={{ width: "100%" }} />
+          <Image src={`${S3_BASE_URL}${id}`} fluid style={{ width: '100%' }} />
         </Modal.Body>
         <Modal.Footer>
           <Container className="text-center">
