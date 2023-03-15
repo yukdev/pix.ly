@@ -1,0 +1,10 @@
+services:
+  backend:
+    image: node:14
+    commands:
+      - cd backend && npm ci
+      - cd backend && npm run build
+      - cd backend && npm start
+    environment:
+      NODE_ENV: production
+    port: 3000
